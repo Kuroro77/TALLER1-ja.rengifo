@@ -1,0 +1,4 @@
+venv/
+.idea/
+pruebas/__pycache__/
+models/__pycache__/
