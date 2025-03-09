@@ -5,3 +5,4 @@ class Usuarios(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(16), unique=True, nullable=False)
     password = db.Column(db.String(16), nullable=False)
+    es_admin = db.Column(db.Boolean, nullable=False)

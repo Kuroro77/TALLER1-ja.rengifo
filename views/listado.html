@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 20px;
+            text-align: center;
+        }
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background: white;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        th, td {
+            padding: 12px;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #007bff;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tr:hover {
+            background-color: #e1e1e1;
+            transition: 0.3s;
+        }
+    </style>
+</head>
+<body>
+<a href="/logout">Cerrar sesion</a>
+<h1>Bienvenido!!!</h1>
+<h3>{{current_user.username}}</h3>
+<h1>Lista Animales</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Raza</th>
+                <th>Edad</th>
+                <th>Peso</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for perro in perros %}
+                <tr>
+                    <td>{{perro.nombre}}</td>
+                    <td>{{perro.raza}}</td>
+                    <td>{{perro.edad}}</td>
+                    <td>{{perro.peso}}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
