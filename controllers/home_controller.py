@@ -1,5 +1,5 @@
-from flask import Blueprint, render_template, request, redirect, url_for
-from flask_login import login_user, current_user, login_required, logout_user
+from flask import Blueprint, render_template, request
+from flask_login import login_user, current_user, logout_user
 
 from models.usuarios import Usuarios
 from models.perros import Perros
